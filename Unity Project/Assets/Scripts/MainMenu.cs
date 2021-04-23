@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
 			}
 			catch (Exception e)
 			{
+				receiveThread.Abort();
 				print(e.ToString());
 			}
 		}
@@ -118,5 +119,7 @@ public class MainMenu : MonoBehaviour
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
 		}
 	}
+
+	
 
 }
